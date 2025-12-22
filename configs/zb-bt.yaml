@@ -272,8 +272,8 @@ script:
       - switch.turn_on: zRST_gpio
       - delay: 1s
       - switch.turn_off: zRST_gpio
-      - logger.log: "Wait 1 seconds for Zigbee chip to be ready"
+#      - logger.log: "Wait 1 seconds for Zigbee chip to be ready"
       - delay: 1s
       - switch.turn_off: zBSL
-      - logger.log: "Update Zigbee with your Z-Stack firmware now!"
+#      - logger.log: "Update Zigbee with your Z-Stack firmware now!"
 
