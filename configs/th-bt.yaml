@@ -70,7 +70,9 @@ ethernet:
   mdc_pin: GPIO23
   mdio_pin: GPIO18
   clk:
-    pin: GPIO0
+    pin: 
+      number: GPIO0
+      ignore_strapping_warning: true
     mode: CLK_EXT_IN
   phy_addr: 1
   power_pin: GPIO16
@@ -78,7 +80,9 @@ ethernet:
 ## UART Settings
 uart:
   id: uart_bus
-  rx_pin: GPIO5
+  rx_pin: 
+    number: GPIO5
+    ignore_strapping_warning: true
   tx_pin: GPIO17
   baud_rate: 460800
 
@@ -223,7 +227,7 @@ switch:
 
 ## Mode LAN/USB switch
   - platform: template
-    name: "DEVICE MODE SWITCH (LAN|OFF / USB|ON)"
+    name: "DEVICE MODE SWITCH (LAN|OFF - USB|ON)"
     restore_mode: RESTORE_DEFAULT_ON
     id: modeSwitchTemplate
     turn_on_action:
@@ -240,7 +244,7 @@ switch:
           state: OFF
 
   - platform: gpio
-    name: "DEVICE MODE SWITCH (LAN|OFF / USB|ON)"
+    name: "DEVICE MODE SWITCH (LAN|OFF - USB|ON)"
     restore_mode: ALWAYS_OFF
     icon: mdi:toggle-switch
     internal: true
@@ -256,6 +260,7 @@ switch:
     id: gpio12LED1
     pin:
       number: GPIO12
+      ignore_strapping_warning: true
 
   - platform: gpio
     name: "LED - power (Yellow)"
