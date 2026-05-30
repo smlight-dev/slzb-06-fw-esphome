@@ -64,7 +64,9 @@ ethernet:
   mdc_pin: GPIO23
   mdio_pin: GPIO18
   clk:
-    pin: GPIO0
+    pin:
+      number: GPIO0
+      ignore_strapping_warning: true
     mode: CLK_EXT_IN
   phy_addr: 1
   power_pin: GPIO16
@@ -163,6 +165,7 @@ switch:
     id: gpio12LED1
     pin:
       number: GPIO12
+      ignore_strapping_warning: true
 
   - platform: gpio
     name: "LED - power (Yellow)"
