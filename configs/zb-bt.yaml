@@ -222,7 +222,7 @@ switch:
 
 ## Mode LAN/USB switch
   - platform: template
-    name: "DEVICE MODE SWITCH (LAN|OFF / USB|ON)"
+    name: "DEVICE MODE SWITCH (LAN|OFF - USB|ON)"
     id: modeSwitchTemplate
     turn_on_action:
       - switch.turn_on: gpio12LED1
@@ -238,7 +238,7 @@ switch:
           state: OFF
 
   - platform: gpio
-    name: "DEVICE MODE SWITCH (LAN|OFF / USB|ON)"
+    name: "DEVICE MODE SWITCH (LAN|OFF - USB|ON)"
     restore_mode: ALWAYS_OFF
     icon: mdi:toggle-switch
     internal: true

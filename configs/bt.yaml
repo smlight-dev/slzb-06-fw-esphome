@@ -146,7 +146,7 @@ switch:
 
 ## Mode LAN/USB switch
   - platform: gpio
-    name: "DEVICE MODE SWITCH (LAN|OFF / USB|ON)"
+    name: "DEVICE MODE SWITCH (LAN|OFF - USB|ON)"
     restore_mode: ALWAYS_OFF
     icon: mdi:toggle-switch
     internal: true
