@@ -55,9 +55,6 @@ ota:
 
 
 # 3. EXTERNAL COMPONENTS USED
-external_components:
-  - source: github://tube0013/esphome-stream-server-v2
-
 dashboard_import:
   package_import_url: github://smlight-dev/slzb-06-fw-esphome/configs/zb-bt.yaml
 
@@ -86,10 +83,11 @@ uart:
   baud_rate: 115200
 
 ## Stream Server
-stream_server:
-  uart_id: uart_bus
-  id: streamServer
-  port: 6638
+uart_tcp:
+  - id: streamServer
+    uart_id: uart_bus
+    role: server
+    port: 6638
 
 ## MDNS service settings
 mdns:
@@ -170,9 +168,10 @@ binary_sensor:
     on_press:
       then:
         - switch.toggle: modeSwitchTemplate
-  - platform: stream_server
-    stream_server: streamServer
-    name: "SLZB-06* Serial Connected"
+  - platform: uart_tcp
+    uart_tcp_id: streamServer
+    connected:
+      name: "SLZB-06* Serial Connected"
 
 # 7. SWITCHES
 ## ESP32 Restart
