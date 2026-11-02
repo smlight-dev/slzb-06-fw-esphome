@@ -56,7 +56,6 @@ ota:
 
 
 # 3. EXTERNAL COMPONENTS USED
-
 dashboard_import:
   package_import_url: github://smlight-dev/slzb-06-fw-esphome/configs/th-bt.yaml
 
