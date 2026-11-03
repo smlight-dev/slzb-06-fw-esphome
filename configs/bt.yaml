@@ -50,9 +50,6 @@ ota:
 
 
 # 3. EXTERNAL COMPONENTS USED
-external_components:
-  - source: github://tube0013/esphome-stream-server-v2
-
 dashboard_import:
   package_import_url: github://smlight-dev/slzb-06-fw-esphome/configs/bt.yaml
 
